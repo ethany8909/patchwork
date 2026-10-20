@@ -1,0 +1,38 @@
+{
+  "name": "patchwork",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Patchwork: a private, all-in-one eczema app built for every skin tone, with check-ins, skin weather, product label checks and a doctor-ready visit report.",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/copy-ocr.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/copy-ocr.mjs",
+    "build": "tsc --noEmit && vite build",
+    "start": "node server/index.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "icons": "node scripts/make-icons.mjs",
+    "vapid": "node server/vapid.mjs"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "dependencies": {
+    "@preact/signals": "^2.11.2",
+    "preact": "^10.29.8",
+    "qrcode-generator": "^2.0.4",
+    "tesseract.js": "^7.0.0",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@tesseract.js-data/eng": "^1.0.0",
+    "@types/node": "^26.6.2",
+    "@types/web-push": "^3.6.4",
+    "fake-indexeddb": "^6.2.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1"
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+# Copied from node_modules by scripts/copy-ocr.mjs before dev and build.
+public/ocr/
+# Push keys, reminder subscriptions and feedback written by the server. Never commit.
+server/data/
+.env
+*.log
+.Rhistory
+.DS_Store
+Thumbs.db
+desktop.ini
+# Local editor/assistant settings
+.claude/
